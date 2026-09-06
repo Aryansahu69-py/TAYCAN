@@ -63,7 +63,11 @@ nav button {
 }
 main p{
     margin-left: 20px ;
+    color: black;
+    transition: color 0.3s ease;
+    position: relative;
 }
+
 
 section {
     height: 50%;
