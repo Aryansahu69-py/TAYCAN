@@ -9,7 +9,7 @@ html ,body {
 }
 
 main {
-    padding: 3px 3px;
+    padding: 5px 30px 15px 30px;
     height: 100%;
     width: 100%;
    
@@ -17,15 +17,14 @@ main {
     
 }
 nav{
-    padding: 3px 30px;
+    margin-left: 70px;
     display: flex;
     gap: 40px;
-    
     align-items: center;
 }
 nav img{
-    height: 150px;
-    width: 145px;
+    height: 100px;
+    width: 90px;
     margin-right: 120px;
 }
 nav button{
@@ -46,4 +45,39 @@ nav button{
     font-weight: 700;
     cursor: pointer;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+section{
+    height: 50%;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+}
+h1{
+    font-family: sans-serif;
+    font-size: 320px;
+    color:white;
+    -webkit-text-stroke: 2px rgb(149, 145, 145);
+    margin-left: 85px;
+    
+}
+.car-div{
+    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 37%;
+    
+    display: flex;
+    align-items: center;
+
+}
+.car-div img{
+    
+    
+    margin-left: 150px;
+
 }
