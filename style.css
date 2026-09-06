@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-html ,body {
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -12,22 +14,23 @@ main {
     padding: 5px 30px 15px 30px;
     height: 100%;
     width: 100%;
-   
     gap: 10px;
-    
 }
-nav{
+
+nav {
     margin-left: 70px;
     display: flex;
     gap: 40px;
     align-items: center;
 }
-nav img{
+
+nav img {
     height: 100px;
     width: 90px;
     margin-right: 120px;
 }
-nav button{
+
+nav button {
     margin-left: 130px;
     width: 120px;
     height: 37px;
@@ -37,47 +40,77 @@ nav button{
     cursor: pointer;
     font-weight: 700;
 }
-.links{
+
+.links {
     display: flex;
     gap: 80px;
-    align-items:center ;
+    align-items: center;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-section{
+
+section {
     height: 50%;
     width: 90%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-    
+
+
 }
-h1{
+
+.mainheading{
     font-family: sans-serif;
     font-size: 320px;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     -webkit-text-stroke: 2px rgb(196, 191, 191);
     margin-left: 85px;
-    
+
 }
-.car-div{
-    
+
+.car-div {
+
     position: absolute;
     height: 100%;
     width: 100%;
     top: 40%;
-    
     display: flex;
     align-items: center;
 
 }
-.car-div img{
-    
-    
-    margin-left: 140px;
 
+.car-div img {
+    margin-left: 140px;
+}
+footer{
+    display: flex;
+    margin-top: 13%;
+   
+    gap:140px;
+}
+#name{
+    font-family:  sans-serif;
+    color: black;
+}
+#model{
+    color: gray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 35px;
+}
+.Feature{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+.spec{
+    color: gray;
+    font-size: 30px;
+}
+.Feature h1{
+    font-family:monospace;
+    font-size: 45px;
+    font-weight: 500;
 }
