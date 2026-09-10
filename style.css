@@ -10,25 +10,33 @@ body {
     width: 100%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 main {
     padding: 5px 30px 15px 30px;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     gap: 10px;
 }
+
+/* =========================
+   DESKTOP — KEEP ORIGINAL LOOK
+   ========================= */
 
 nav {
     margin-left: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 nav img {
     height: 100px;
     width: 170px;
     margin-right: 120px;
+    object-fit: contain;
 }
 
 nav button {
@@ -41,33 +49,35 @@ nav button {
     cursor: pointer;
     font-weight: 700;
     border-radius: 20px;
+    flex-shrink: 0;
 }
 
 .links {
     display: flex;
     gap: 70px;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: rgba(255,255,255,0.15);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 100px;
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
     height: 50px;
     width: 1100px;
-    
 }
-main p{
-    margin-left: 20px ;
+
+main p {
+    margin-left: 20px;
     color: black;
     transition: color 0.3s ease;
     position: relative;
 }
-
 
 section {
     height: 50%;
@@ -76,59 +86,296 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-
 }
 
-.mainheading{
+.mainheading {
     font-family: sans-serif;
     font-size: 320px;
+    line-height: normal;
     color: rgb(0, 0, 0);
     -webkit-text-stroke: 2px rgb(196, 191, 191);
     margin-left: 85px;
-
 }
 
 .car-div {
-
     position: absolute;
     height: 100%;
     width: 100%;
     top: 40%;
     display: flex;
     align-items: center;
-
 }
 
 .car-div img {
+    width: 1450px;
+    height: 700px;
+    object-fit: contain;
     margin-left: 140px;
 }
-footer{
+
+footer {
     display: flex;
     margin-top: 13%;
-   
-    gap:140px;
+    gap: 140px;
+    align-items: flex-end;
 }
-#name{
-    font-family:  sans-serif;
+
+#name {
+    font-family: sans-serif;
     color: black;
 }
-#model{
+
+#model {
     color: gray;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 35px;
 }
-.Feature{
+
+.Feature {
     display: flex;
     justify-content: space-between;
     gap: 60px;
 }
-.spec{
+
+.spec {
     color: gray;
-    font-size: 35px;  
+    font-size: 35px;
 }
-.Feature h1{
-    font-family:monospace;
+
+.Feature h1 {
+    font-family: monospace;
     font-size: 45px;
     font-weight: 500;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1200px) {
+    main {
+        padding: 5px 20px 20px;
+    }
+
+    nav {
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    nav img {
+        width: 130px;
+        height: 75px;
+        margin-right: 0;
+    }
+
+    nav button {
+        margin-left: 0;
+    }
+
+    .links {
+        width: min(100%, 850px);
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    main p {
+        margin-left: 0;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .mainheading {
+        font-size: clamp(170px, 25vw, 270px);
+        margin-left: 30px;
+    }
+
+    .car-div img {
+        width: min(90vw, 1200px);
+        height: auto;
+        margin-left: 40px;
+    }
+
+    footer {
+        gap: 40px;
+        margin-top: 12%;
+    }
+
+    .Feature {
+        gap: 30px;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+    main {
+        padding: 5px 12px 20px;
+    }
+
+    nav {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav > div:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav img {
+        width: 120px;
+        height: 65px;
+        margin-right: 0;
+    }
+
+    .links {
+        order: 2;
+        width: 100%;
+        height: 46px;
+        padding: 0 15px;
+        gap: 22px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        border-radius: 25px;
+        scrollbar-width: none;
+    }
+
+    .links::-webkit-scrollbar {
+        display: none;
+    }
+
+    main p {
+        margin-left: 0;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    nav button {
+        order: 3;
+        width: 110px;
+        height: 34px;
+        margin-left: 0;
+        font-size: 11px;
+    }
+
+    section {
+        height: 42vh;
+        min-height: 330px;
+        width: 100%;
+    }
+
+    .mainheading {
+        font-size: clamp(65px, 20vw, 140px);
+        line-height: 0.9;
+        margin: 25px auto 0;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
+        -webkit-text-stroke: 1px rgb(196, 191, 191);
+    }
+
+    .car-div {
+        top: 35%;
+        height: 75%;
+        justify-content: center;
+    }
+
+    .car-div img {
+        width: 110vw;
+        height: auto;
+        max-width: none;
+        margin-left: 0;
+    }
+
+    footer {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    #model {
+        font-size: 22px;
+    }
+
+    .Feature {
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .spec {
+        font-size: 17px;
+    }
+
+    .Feature h1 {
+        font-size: 27px;
+    }
+
+    footer > div:last-child {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    footer > div:last-child img {
+        width: 110px;
+        height: 75px;
+        object-fit: cover;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 420px) {
+    .links {
+        gap: 18px;
+    }
+
+    main p {
+        font-size: 10px;
+    }
+
+    .mainheading {
+        font-size: 21vw;
+    }
+
+    section {
+        height: 38vh;
+        min-height: 280px;
+    }
+
+    .car-div {
+        top: 38%;
+    }
+
+    .car-div img {
+        width: 120vw;
+    }
+
+    .Feature {
+        gap: 6px;
+    }
+
+    .spec {
+        font-size: 14px;
+    }
+
+    .Feature h1 {
+        font-size: 23px;
+    }
+
+    #model {
+        font-size: 19px;
+    }
 }
